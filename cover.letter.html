@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cover Letter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Samer<br>
+        [Your Address]<br>
+        [City, State, Zip Code]<br>
+        [Email Address]<br>
+        [Phone Number]<br>
+        [Date]</p>
+
+        <p>[Employer's Name]<br>
+        [Company Name]<br>
+        [Company Address]<br>
+        [City, State, Zip Code]</p>
+
+        <p>Dear [Employer's Name],</p>
+
+        <p>I am writing to express my interest in the <strong>Mechanical Manager </strong>position at [Company Name] as advertised. With a solid foundation in mechanical engineering, combined with extensive experience in managing engineering teams and overseeing large-scale projects, I am confident in my ability to contribute effectively to your team.</p>
+
+        <p>In my previous role as a Senior Mechanical Engineer at RTCC, I successfully led a team of many engineers and technicians, managing multiple projects simultaneously. My responsibilities included project planning, resource allocation, and ensuring that all projects were completed on time and within budget. One of my significant achievements was the redesign of a critical manufacturing process that resulted in a 15% increase in production efficiency and a 10% reduction in operational costs.</p>
+
+        <p>My educational background, including a Bachelor's degree in Mechanical Engineering from Zagzig University  and various certifications in project management and advanced engineering technologies, has equipped me with a comprehensive understanding of mechanical systems and the latest industry trends. I am adept at using engineering software such as AutoCAD, SolidWorks, and ANSYS, which allows me to develop innovative solutions and optimize existing processes.</p>
+
+        <p>I am particularly drawn to [Company Name] because of your commitment to innovation and excellence in the field of mechanical engineering. I am excited about the opportunity to bring my unique skills and experiences to your esteemed company and contribute to your continued success.</p>
+
+        <p>Thank you for considering my application. I look forward to the opportunity to discuss how my background, skills, and certifications can be in line with the goals and needs of [Company Name]. I am available at your earliest convenience for an interview and can be reached at [Your Phone Number] or via email at [Your Email Address].</p>
+
+        <p>Sincerely,<br>
+        Samer Alsaadni</p>
+
+        <button class="button" onclick="copyText()">Copy Text</button>
+        <button class="button" onclick="sendEmail()">Send Email</button>
+    </div>
+
+    <script>
+        function copyText() {
+            const text = `[Your Name]
+[Your Address]
+[City, State, Zip Code]
+[Email Address]
+[Phone Number]
+[Date]
+
+[Employer's Name]
+[Company Name]
+[Company Address]
+[City, State, Zip Code]
+
+Dear [Employer's Name],
+
+I am writing to express my interest in the Mechanical Manager position at [Company Name] as advertised. With a solid foundation in mechanical engineering, combined with extensive experience in managing engineering teams and overseeing large-scale projects, I am confident in my ability to contribute effectively to your team.
+
+In my previous role as a Senior Mechanical Engineer at [Previous Company], I successfully led a team of 20 engineers and technicians, managing multiple projects simultaneously. My responsibilities included project planning, resource allocation, and ensuring that all projects were completed on time and within budget. One of my significant achievements was the redesign of a critical manufacturing process that resulted in a 15% increase in production efficiency and a 10% reduction in operational costs.
+
+My educational background, including a Bachelor's degree in Mechanical Engineering from [University Name] and various certifications in project management and advanced engineering technologies, has equipped me with a comprehensive understanding of mechanical systems and the latest industry trends. I am adept at using engineering software such as AutoCAD, SolidWorks, and ANSYS, which allows me to develop innovative solutions and optimize existing processes.
+
+I am particularly drawn to [Company Name] because of your commitment to innovation and excellence in the field of mechanical engineering. I am excited about the opportunity to bring my unique skills and experiences to your esteemed company and contribute to your continued success.
+
+Thank you for considering my application. I look forward to the opportunity to discuss how my background, skills, and certifications can be in line with the goals and needs of [Company Name]. I am available at your earliest convenience for an interview and can be reached at [Your Phone Number] or via email at [Your Email Address].
+
+Sincerely,
+[Your Name]`;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Text copied to clipboard');
+            });
+        }
+
+        function sendEmail() {
+            const email = 'mailto:?subject=Application for Mechanical Manager Position&body=' + encodeURIComponent(document.querySelector('.container').innerText);
+            window.location.href = email;
+        }
+    </script>
+</body>
+</html>
